@@ -1,6 +1,6 @@
-# LIBRXTX Docker
+# Clerezza Docker
 
-A Docker Image providing java with LIBRXTX. Typically an extending image will
-add a java application and will have to be invoked something like
+A Docker Image for Apache Clerezza.
 
-    docker -v /dev/ttyUSB0:/dev/ttyUSB0 -privileged <image-name>
+
+    docker run -ti -p 8080:8080 -p 8443:8443 -p 8022:8022 -v $HOME/.clerezza:/home/clerezza/.clerezza -v `pwd`/workspace:/home/clerezza/workspace reto/clerezza
